@@ -21,6 +21,7 @@ public class LoginController {
 	// http://syaku.tistory.com/263  (db 연동)
 	// http://goodcodes.tistory.com/57 (Spring Security)
 	// http://tikongs.tistory.com/103 (Session 관리)
+	// http://noritersand.tistory.com/211 (jquery validate 참조) 
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	

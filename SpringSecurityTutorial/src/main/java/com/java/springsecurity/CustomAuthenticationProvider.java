@@ -31,7 +31,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
          
         logger.info("사용자가 입력한 로그인정보입니다. {}", user_id + "/" + user_pw);
          
-        if(user_id.equals("test")&&user_pw.equals("test")){
+        if(user_id.equals("test@test.com")&&user_pw.equals("test")){
             logger.info("정상 로그인입니다.");
             List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
             roles.add(new SimpleGrantedAuthority("ROLE_USER"));
