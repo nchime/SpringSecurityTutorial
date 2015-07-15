@@ -1,48 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!-- 
-
-<html>
-<head>
-    <title>로그인페이지</title>  
-</head>
-  
-<body>
-<h2>로그인 </h2>
-<form name="form" method="post" action="loginProcess">
-<table>
-    <tr height="40px">
-        <td>사용자아이디</td>
-        <td><input type="text" name="id"></td>
-    </tr>
-    <tr height="40px">
-        <td>패스워드</td>
-        <td><input type="password" name="pw"></td>
-    </tr>
-</table>
-<table>
-    <tr>
-        <td align="center"><input type="submit" value="로그인"></td>
-        <td align="center"><input type="reset" value="리셋"></td>
-    </tr>
-</table>
-</form>
-</body>
-</html>
-
- -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -61,6 +18,34 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
 
 
 	<div class="container">
@@ -135,3 +120,44 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<html>
+<head>
+    <title>로그인페이지</title>  
+</head>
+  
+<body>
+<h2>로그인 </h2>
+<form name="form" method="post" action="loginProcess">
+<table>
+    <tr height="40px">
+        <td>사용자아이디</td>
+        <td><input type="text" name="id"></td>
+    </tr>
+    <tr height="40px">
+        <td>패스워드</td>
+        <td><input type="password" name="pw"></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td align="center"><input type="submit" value="로그인"></td>
+        <td align="center"><input type="reset" value="리셋"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+
+ -->
