@@ -41,7 +41,14 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             return result;         
         }else{
             logger.info("사용자 크리덴셜 정보가 틀립니다. 에러가 발생합니다.");
-            throw new BadCredentialsException("Bad credentials");
+            
+            //TODO 로그인 실패  메시지 전달 기능   
+            
+            
+            
+//            throw new BadCredentialsException("Bad credentials");
+            throw new BadCredentialsException("입력한 로그인 정보에 해당하는 사용자가 없습니다.");
+            
         }
     }
 }

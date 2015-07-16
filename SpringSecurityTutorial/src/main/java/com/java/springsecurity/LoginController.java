@@ -66,6 +66,22 @@ public class LoginController {
 	        
 			return "main";
 	    }
+	    
+	    
+/*	    
+	    @RequestMapping(value = "loginFail", method = RequestMethod.GET)
+	    public String login_fail(Model model) {
+	    	
+	    	logger.info("로그인 실패 처리 컨트롤러..");
+	    	
+	    	model.addAttribute("error", "true");  
+	        
+			return "login";
+	    }
+	     
+*/	    
+	    
+	    
 	     
 	    @RequestMapping(value = "page1", method = RequestMethod.GET)
 	    public void page1() {      

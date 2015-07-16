@@ -16,10 +16,13 @@
                     password-parameter="pw"    
                     login-processing-url="/loginProcess"
                     default-target-url="/login_success"
-                    authentication-failure-url="/login"
+                    authentication-failure-url="/login?auth=fail"  
                     always-use-default-target='true'
                     />
          
+         
+         
+         <!-- 중복 로그인 가능한 세션수 지정 -->
         <session-management>
             <concurrency-control max-sessions="1" expired-url="/login_duplicate"/>
         </session-management>
