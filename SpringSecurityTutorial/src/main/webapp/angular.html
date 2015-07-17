@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Bootstrap Example</title>
+<meta charset="EUC-KR">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+<script>
+		
+		var myApp = angular.module('myApp', []);
+
+		myApp.controller('MainCtrl', ['$scope', function ($scope) {
+		    $scope.text = 'Hello, Angular fanatic.';
+		    $scope.name = '한글';		    
+		    
+		    $scope.user = {};
+		    $scope.user.details = {
+		      "username": "Todd Motto",
+		      "id": "89101112"
+		    };
+		    
+		    
+		    $scope.numbers = [10, 25, 35, 45, 60, 80, 100];
+		    $scope.lowerBound = 42;
+		    // 필터가 되어줘
+		    $scope.greaterThanNum = function (item) {
+		        return item > $scope.lowerBound;
+		    };
+		    
+		    
+		    $scope.students = [{name : '홍길동', score: 100}, 
+		                       {name : '임꺽정', score: 90},
+		                       {name : '임꺽정2', score: 70},
+		                       {name : '임꺽정3', score: 40},
+		                       {name : '임꺽정4', score: 10},
+		    ]; 
+		    
+		    $scope.getAverage = function() { 
+		    	var output = 0;
+		    	
+		    	for (var int = 0; int < $scope.students.length; int++) {
+					output += $scope.students[int].score; 
+				} 
+		    	
+		    	return output / $scope.students.length; 
+		    }
+		    
+		    $scope.totalCount =  $scope.students.length; 
+		    
+
+		}]);
+		
+</script>
+
+</head>
+<body class="container" ng-app="myApp">
+
+	<div ng-controller="MainCtrl">
+		<div class="jumbotron">
+			<h1>{{ text }}</h1>
+			<p>{{  name }} : Resize this responsive page to see the effect!</p>
+			<p>{{  user.details.username }} </p>
+			<p>{{  user.details.id }} </p>
+		</div>
+		
+<!-- 			<li ng-repeat="number in numbers | filter:greaterThanNum">  {{ number }}  </li>
+ -->
+ 
+ 		<table class="table">
+			<tr>
+				<th> 순번 </th>
+				<th> 이름 </th>
+				<th> Score </th>
+			</tr>
+			<tr ng-repeat="student in students">
+				<td> {{ totalCount - $index  }}  </td>
+				<td> {{ student.name }} </td>				
+				<td> <input type="number" class="input-small" ng-model="student.score" /> </td>				
+			</tr>
+		</table> 
+		<h3> Average :  {{ getAverage() }}</h3>
+ 
+ 	</div>
+
+
+	<!--
+		<table class="table">
+			<tr>
+				<th> 순번 </th>
+				<th> 이름 </th>
+				<th> Score </th>
+			</tr>
+			<tr ng-repeat="student in students">
+				<td> {{ student.id }} </td>
+				<td> {{ student.name }} </td>				
+				<td> {{ student.score }} </td>				
+			</tr>
+		</table> 
+	 -->
+	 
+    <div class="button"
+        ng-repeat="item in '가나다라마바사아자차카타파하'.split('')">
+      {{$index + 1}}. {{item}}
+    </div>
+	 
+	 
+</body>
+</html>
